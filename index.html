@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CreativeBrio — App Development</title>
+  <meta name="description" content="CreativeBrio — App development by Nikhil Sharma. Mobile apps, UX/UI, product strategy." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071021 0%, #0b1220 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:36px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:22px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin:36px 0;align-items:center}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .hero-left h2{margin:0 0 12px;font-size:28px}
+    .cta{display:inline-block;margin-top:16px;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041027;text-decoration:none;font-weight:600}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .service{background:var(--glass);padding:14px;border-radius:10px}
+    .service h4{margin:6px 0}
+    .contact-card{display:flex;flex-direction:column;gap:12px}
+    .contact-card .item{display:flex;gap:10px;align-items:center}
+    .contact-card .label{color:var(--muted);font-size:13px}
+    .phone{font-weight:700}
+    .portfolio{margin:26px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .project{height:120px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+    footer{margin-top:28px;border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    .small{font-size:13px}
+    /* responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr} .services{grid-template-columns:repeat(2,1fr)} .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.services{grid-template-columns:1fr} .grid{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start} .brand .logo{width:48px;height:48px}}
+    /* simple form styles */
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:8px;color:inherit}
+    textarea{min-height:110px;resize:vertical}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041027;font-weight:700;border:none;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CB</div>
+        <div>
+          <h1>CreativeBrio</h1>
+          <p class="lead">App development · UX/UI · Product strategy</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>We build delightful mobile apps that people love</h2>
+        <p class="lead">From idea to release — product strategy, design and engineering for iOS and Android. Fast iterations, clear roadmaps and production-ready code.</p>
+
+        <div class="services" id="services">
+          <div class="service card">
+            <h4>Custom Mobile Apps</h4>
+            <p class="small">Native and cross-platform (Flutter, React Native) apps built for scale.</p>
+          </div>
+          <div class="service card">
+            <h4>UX / UI Design</h4>
+            <p class="small">Pixel-perfect interfaces and interaction design with a focus on conversion.</p>
+          </div>
+          <div class="service card">
+            <h4>Product Strategy</h4>
+            <p class="small">Roadmapping, MVP definition, and analytics to validate product-market fit.</p>
+          </div>
+        </div>
+
+        <a class="cta" href="#contact">Get a free consultation</a>
+      </div>
+
+      <aside class="card contact-card" id="contact">
+        <div>
+          <h3 style="margin:0">Contact</h3>
+          <p class="small" style="margin:6px 0 0">Nikhil Sharma — Founder</p>
+        </div>
+
+        <div class="item">
+          <div class="label">Phone</div>
+          <div class="phone"><a href="tel:+919990496929" style="color:inherit;text-decoration:none">+91 99904 96929</a></div>
+        </div>
+
+        <div class="item">
+          <div class="label">Address</div>
+          <div class="small">297 NK1</div>
+        </div>
+
+        <div style="margin-top:6px">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell us about your project..."></textarea>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn" onclick="sendMail()">Send</button>
+            <a class="btn" href="tel:+919990496929">Call</a>
+          </div>
+        </div>
+        <p class="small" style="margin-top:10px;color:var(--muted)">Or email: <a href="mailto:hello@creativebrio.in" style="color:inherit">hello@creativebrio.in</a></p>
+      </aside>
+    </section>
+
+    <section class="portfolio card">
+      <h3 style="margin-top:0">Selected work</h3>
+      <div class="grid">
+        <div class="project">Project A — eCommerce app</div>
+        <div class="project">Project B — Fintech app</div>
+        <div class="project">Project C — Social app</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> CreativeBrio · Nikhil Sharma</div>
+      <div class="small">Phone: <a href="tel:+919990496929" style="color:inherit">+91 99904 96929</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function sendMail(){
+      const text = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Project inquiry — CreativeBrio');
+      const body = encodeURIComponent(text + '\n\n--\nNikhil Sharma');
+      window.location = 'mailto:hello@creativebrio.in?subject='+subject+'&body='+body;
+    }
+  </script>
+</body>
+</html>
