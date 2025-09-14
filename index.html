@@ -1,138 +1,288 @@
-<!doctype html>
+
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CreativeBrio — App Development</title>
-  <meta name="description" content="CreativeBrio — App development by Nikhil Sharma. Mobile apps, UX/UI, product strategy." />
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071021 0%, #0b1220 100%);color:#e6eef6;line-height:1.5}
-    .container{max-width:1100px;margin:0 auto;padding:36px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
-    h1{font-size:22px;margin:0}
-    p.lead{color:var(--muted);margin:6px 0 0}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-size:14px}
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin:36px 0;align-items:center}
-    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    .hero-left h2{margin:0 0 12px;font-size:28px}
-    .cta{display:inline-block;margin-top:16px;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041027;text-decoration:none;font-weight:600}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    .service{background:var(--glass);padding:14px;border-radius:10px}
-    .service h4{margin:6px 0}
-    .contact-card{display:flex;flex-direction:column;gap:12px}
-    .contact-card .item{display:flex;gap:10px;align-items:center}
-    .contact-card .label{color:var(--muted);font-size:13px}
-    .phone{font-weight:700}
-    .portfolio{margin:26px 0}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .project{height:120px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
-    footer{margin-top:28px;border-top:1px solid rgba(255,255,255,0.03);padding-top:20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
-    .small{font-size:13px}
-    /* responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr} .services{grid-template-columns:repeat(2,1fr)} .grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:560px){.services{grid-template-columns:1fr} .grid{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start} .brand .logo{width:48px;height:48px}}
-    /* simple form styles */
-    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
-    input,textarea{width:100%;padding:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:8px;color:inherit}
-    textarea{min-height:110px;resize:vertical}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#041027;font-weight:700;border:none;cursor:pointer}
-  </style>
-</head>
+<!--=============== basic  ===============-->
+
+	<meta charset="UTF-8" />
+	<title>Creative Brio - Coming Soon</title>
+	<meta name="description" content="Game Development, Web Development, Website" />
+	<meta name="keywords" content="Game Development, website, Web Development, Creative Brio" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+<!--=============== css  ===============-->	
+
+	<link type="text/css" rel="stylesheet" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css" />
+	<link rel="stylesheet" href="css/superslides.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+<!--=============== fonts  ===============-->
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css' />
+
+<!--=============== favicons ===============-->
+
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">CB</div>
-        <div>
-          <h1>CreativeBrio</h1>
-          <p class="lead">App development · UX/UI · Product strategy</p>
-        </div>
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<!--================= Wrapper start ================-->
+<div id="wrapper">
 
-    <section class="hero">
-      <div class="hero-left">
-        <h2>We build delightful mobile apps that people love</h2>
-        <p class="lead">From idea to release — product strategy, design and engineering for iOS and Android. Fast iterations, clear roadmaps and production-ready code.</p>
 
-        <div class="services" id="services">
-          <div class="service card">
-            <h4>Custom Mobile Apps</h4>
-            <p class="small">Native and cross-platform (Flutter, React Native) apps built for scale.</p>
-          </div>
-          <div class="service card">
-            <h4>UX / UI Design</h4>
-            <p class="small">Pixel-perfect interfaces and interaction design with a focus on conversion.</p>
-          </div>
-          <div class="service card">
-            <h4>Product Strategy</h4>
-            <p class="small">Roadmapping, MVP definition, and analytics to validate product-market fit.</p>
-          </div>
-        </div>
+	<div class="container-bg">
+		<div class="container-overlay"></div>
+		<span class="over-border top-border"></span>
+		<span class="over-border bottom-border"></span>
+		<span class="over-border left-border"></span>
+		<span class="over-border right-border"></span>
+	</div>
+	
+<!--================= Slider start ================-->
 
-        <a class="cta" href="#contact">Get a free consultation</a>
-      </div>
+	<div id="slides">
+	
+		<ul class="slides-container">
+				
+			<!-- Slide 1 -->
+				
+			<li>		
+				<div style="background-image: url('img/2.jpg');" class="slides-fullscreen-img"></div>
+			</li>
+					
+			<!-- Slide 2 -->
+					
+			<li>
+				<div style="background-image: url('img/3.jpg');" class="slides-fullscreen-img"></div>
+			</li>
+	
+			<!-- Slide 3 -->
+					
+			<li>	
+				<div style="background-image: url('img/1.jpg');" class="slides-fullscreen-img"></div>
+			</li>
+				
+		</ul>
+					
+  	</div><!-- Slider end -->
+	
+<!--================= Main start ================-->
 
-      <aside class="card contact-card" id="contact">
-        <div>
-          <h3 style="margin:0">Contact</h3>
-          <p class="small" style="margin:6px 0 0">Nikhil Sharma — Founder</p>
-        </div>
+	<div class="main">
 
-        <div class="item">
-          <div class="label">Phone</div>
-          <div class="phone"><a href="tel:+919990496929" style="color:inherit;text-decoration:none">+91 99904 96929</a></div>
-        </div>
+		<div class="swiper-container">
+		
+			<div class="swiper-wrapper">
+			
 
-        <div class="item">
-          <div class="label">Address</div>
-          <div class="small">297 NK1</div>
-        </div>
+				<div class="swiper-slide">
+				
+			 <!--================= About start ================-->
+			 
+					<div class="container">
+										
+						<div class="content"> 
+	
+							<h2>About us</h2>    
+							<div class="small-separator"></div>                       	
+			
+							<p class="align-just"> Innovation, creativity, quality and promptness are the main mantras of Creative Brio and these are reflected in our work. We understand the challenges and the changes that the present world meets and that's why our Company are specifically tailored to your specific business needs and personal preferences. We strive hard to deliver fresh design & branding solutions with right mix of our creative people from a variety of experiences and backgrounds.</p> 
+							<p class="align-just">We are a Team of expert Designers and Developers trained in the industry who offer a quality, professional and trustworthy services. Our Team works closely with your organization to develop a web site that is consistent with the history of your company and at the same time competent with today's technology.</p>
+								
+							<!--social-links -->
+								
+							<div class="social-links">
+								<ul>
+									<li><a href="http://www.facebook.com/creativebrioindia" target="_blank" class="transition"><i class="fa fa-facebook-square"></i><span>Facebook</span></a></li>
+<!--									<li><a href="#" target="_blank" class="transition"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>	-->
+									<li><a href="#" target="_blank" class="transition"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
+								</ul>
+							</div>
+			
+						</div><!--About end-->
+						<a class="navigation arrow-right back-left transition" href="#"><i class="fa fa-chevron-right"></i></a>  
+					</div>
+					
+				</div>
+				
 
-        <div style="margin-top:6px">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell us about your project..."></textarea>
-          <div style="margin-top:10px;display:flex;gap:8px">
-            <button class="btn" onclick="sendMail()">Send</button>
-            <a class="btn" href="tel:+919990496929">Call</a>
-          </div>
-        </div>
-        <p class="small" style="margin-top:10px;color:var(--muted)">Or email: <a href="mailto:hello@creativebrio.in" style="color:inherit">hello@creativebrio.in</a></p>
-      </aside>
-    </section>
 
-    <section class="portfolio card">
-      <h3 style="margin-top:0">Selected work</h3>
-      <div class="grid">
-        <div class="project">Project A — eCommerce app</div>
-        <div class="project">Project B — Fintech app</div>
-        <div class="project">Project C — Social app</div>
-      </div>
-    </section>
+				<div class="swiper-slide"> 
+				
+				<!--============= Countdown start =============-->	
+				      	          
+					<div class="container">
+						
+						<div class="content fistslide transition bc"> 
+						
+						<div class="fade transition">  
+						<span class="rotade rot-top-left"></span>
+						<span class="rotade rot-top-right"></span>
+						<span class="rotade rot-bottom-left"></span>
+						<span class="rotade rot-bottom-right"></span>  
+							<img src="img/logo.png" alt="" /> 
+							 
+								<ul class="countdown">
+									<li>
+										<span class="days rot">00</span>
+										<p class="days_ref">days</p>			
+									</li>
+									<li>
+										<span class="hours rot">00</span>
+										<p class="hours_ref">hours</p>
+									</li>
+									<li>
+										<span class="minutes rot2">00</span>
+										<p class="minutes_ref">minutes</p>
+							
+									</li>
+									<li>
+										<span class="seconds rot2">00</span>
+										<p class="seconds_ref">seconds</p>
+									</li>
+								</ul>
+									
+			
+							<h3>We are currently working on our Awesome Website<br>Coming Soon...!!!</h3>
+ 
+						</div> 
+						             
+						<div class="clear"></div>
+							
+						<div class="show-progress isDown transition">
+							<i class="fa fa-chevron-down fa-2x"></i>
+						</div>
+							
+						</div> 
+						              
+						<a class="navigation arrow-left about-link transition" href="#"><i class="fa fa-info fa-1x"></i></a> 
+						<a class="navigation arrow-right contact-link transition" href="#"><i class="fa fa-envelope-o fa-1x"></i></a> 
 
-    <footer>
-      <div class="small">© <span id="year"></span> CreativeBrio · Nikhil Sharma</div>
-      <div class="small">Phone: <a href="tel:+919990496929" style="color:inherit">+91 99904 96929</a></div>
-    </footer>
-  </div>
+						<div class="progress-holder">
+						
+							<div class="progress">
+							 
+							<input data-bgcolor="#ccc" data-readonly="true" type="text" data-width="250" data-skin="tron" data-fgcolor="#fff" data-thickness=".07" data-angleoffset="180" class="num num2" name="65" value="0" />
+							<span class="percent">%</span>
+							
+							</div>
+							
+							<h3>NOTIFY ME WHEN IT'S READY</h3> 
+							
+							<div class="subcribe">
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function sendMail(){
-      const text = document.getElementById('message').value.trim();
-      const subject = encodeURIComponent('Project inquiry — CreativeBrio');
-      const body = encodeURIComponent(text + '\n\n--\nNikhil Sharma');
-      window.location = 'mailto:hello@creativebrio.in?subject='+subject+'&body='+body;
-    }
-  </script>
+								<span class="overlay suboverlay"></span>
+								<fieldset>
+									<form class="subscriptionForm" method="post" />
+										<input id="subscriptionForm" class="inputForm" type="text" value="info@creativebrio.in" onfocus="if (this.value=='info@creativebrio.in') this.value=''" onblur="if (this.value==''){this.value='info@creativebrio.in'}" />
+										<input type="submit" id="submitButton" class="transition" value="Send" />
+									</form>
+									
+									<div id="success">Thanks for your subscription</div>
+									<div id="error">Please enter a valid email address</div>
+									
+								</fieldset>
+								
+							</div>
+							 
+						</div> 
+						
+					</div> <!-- Countdown end --> 
+					   
+				</div>
+				
+
+				<div class="swiper-slide">
+				
+				<!--============== Contact start ================-->
+							
+					<div class="container">
+
+						<div class="content fade2 transition">
+						
+							<h2>Get in touch</h2> 
+							<div class="small-separator"></div>
+					
+							
+							<p class="align-just" style="text-align:center"> If you would like to find out more about how we can help you,</br> please give us a call or drop us an email. </p> 
+							
+							<div class="contact-info">
+							
+								<div class="grid-2 transition">
+									<i class="fa fa-mobile fa-2x"></i>
+									<br /><br /> +91 95 40 092025 
+								</div>	
+								
+								<div class="grid-2 transition lanch-form">
+									<i class="fa fa-envelope-o fa-2x"></i> 
+									<br /><br />info@creativebrio.in
+								</div>
+								
+								<div class="grid-2 transition">
+									<i class="fa fa-globe fa-2x"></i>
+									<br /><br /><a href="#" target="_blank">creativebrio.in</a> 
+								</div>
+							</div>			
+						</div>
+						
+						<!--contact form -->
+						
+						<div class="contact-form clear">
+							<div class="close-form transition"><i class="fa fa-times"></i></div>
+							<fieldset id="contact_form">
+																		
+										
+								<div class="grid-half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+										
+								<div class="grid-half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" class="right" />
+								</div>
+										
+								<label for="message" class="m-top">Message</label>
+								<textarea name="message" id="message"></textarea>
+										
+								<div class="clear"></div>
+																	
+								<label>
+									<button class="submit_btn transition" id="submit_btn"><i class="fa fa-envelope-o fa-2x"></i> </button>
+								</label>
+								<div id="result"></div>
+								
+							</fieldset>
+								
+						</div>
+						
+						<a class="navigation arrow-left back-right transition" href="#"><i class="fa fa-chevron-left"></i></a> 
+						
+					</div><!--Contact end -->  
+					      
+				</div>
+				
+
+			</div> 
+			
+		</div>
+		
+	</div><!-- Main end -->
+	
+</div><!-- Wrapper end -->
+
+<!--=============== javascript ===============-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jpreloader.min.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/idangerous.swiper-2.0.min.js"></script>
+	<script type="text/javascript" src="js/superslides.js"></script>
+	<script type="text/javascript" src="js/county.js"></script>
+	<script type="text/javascript" src="js/jquery.knob.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+	
 </body>
 </html>
