@@ -1,288 +1,247 @@
-
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Brio - Digital Design Agency</title>
+    <meta name="description" content="Creative Brio is a creative agency specializing in Brand Building, Web Design, 3D & VFX, and Application Development.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<meta charset="UTF-8" />
-	<title>Creative Brio - Coming Soon</title>
-	<meta name="description" content="Game Development, Web Development, Website" />
-	<meta name="keywords" content="Game Development, website, Web Development, Creative Brio" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	
-<!--=============== css  ===============-->	
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	<link type="text/css" rel="stylesheet" href="css/reset.css" />
-	<link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css" />
-	<link rel="stylesheet" href="css/superslides.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/font-awesome.min.css" />
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts: Oswald & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-<!--=============== fonts  ===============-->
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif'],
+                        'heading': ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css' />
+    <!-- Custom Styles -->
+    <style>
+        /* Apply the heading font to specific elements */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+        }
+        /* Style for the hero background image */
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2787&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
 
-<!--=============== favicons ===============-->
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="logo.png" alt="Creative Brio Logo" class="h-10 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
+                <a href="#work" class="text-gray-300 hover:text-white transition duration-300">Work</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Contact Us</a>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4">
+            <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
+            <a href="#work" class="text-gray-300 hover:text-white transition duration-300">Work</a>
+            <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About</a>
+            <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 text-center">Contact Us</a>
+        </div>
+    </header>
 
-	<link rel="shortcut icon" href="img/favicon.ico" />
+    <main>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<body>
-<!--================= Wrapper start ================-->
-<div id="wrapper">
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero-bg text-white">
+             <div class="bg-black/70 min-h-[70vh] flex items-center">
+                <div class="container mx-auto px-6 py-24 text-center">
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase tracking-wider leading-tight mb-4">Simplicity is Creativity.</h1>
+                    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                        We solve business problems by applying creativity to your brand, providing the simplest, most effective solutions from design to development.
+                    </p>
+                </div>
+             </div>
+        </section>
 
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold uppercase">What We Do</h2>
+                    <p class="text-gray-400 mt-2">Quality-driven solutions to build and grow your brand.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1: Advertising -->
+                    <div class="bg-gray-900 p-8 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex justify-center mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="M4 7V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2h-4"/><polyline points="14 2 14 8 20 8"/><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M7 18v-2h4v2"/><path d="M12 14h.01"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Advertising</h3>
+                        <p class="text-gray-400">Creative designing and publishing of ads that elevate your business promotion and capture attention.</p>
+                    </div>
+                    <!-- Service 2: Web Designing -->
+                    <div class="bg-gray-900 p-8 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex justify-center mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><rect width="18" height="12" x="3" y="10" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/><path d="m21 10-2 12H5L3 10Z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Web Designing</h3>
+                        <p class="text-gray-400">Where technical advancement meets an innovative and creative approach. We build fully responsive HTML5 websites.</p>
+                    </div>
+                    <!-- Service 3: 3D & VFX -->
+                    <div class="bg-gray-900 p-8 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex justify-center mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="m12 15-3.46-6h6.92L12 15Z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">3D & VFX</h3>
+                        <p class="text-gray-400">Our team of creative 3D professionals and VFX artists makes it happen, always striving to do better than the best.</p>
+                    </div>
+                    <!-- Service 4: App Development -->
+                    <div class="bg-gray-900 p-8 rounded-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex justify-center mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">App Development</h3>
+                        <p class="text-gray-400">With technology in every hand, our developers are keen to build amazing applications for Android & iPhones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<div class="container-bg">
-		<div class="container-overlay"></div>
-		<span class="over-border top-border"></span>
-		<span class="over-border bottom-border"></span>
-		<span class="over-border left-border"></span>
-		<span class="over-border right-border"></span>
-	</div>
-	
-<!--================= Slider start ================-->
-
-	<div id="slides">
-	
-		<ul class="slides-container">
-				
-			<!-- Slide 1 -->
-				
-			<li>		
-				<div style="background-image: url('img/2.jpg');" class="slides-fullscreen-img"></div>
-			</li>
-					
-			<!-- Slide 2 -->
-					
-			<li>
-				<div style="background-image: url('img/3.jpg');" class="slides-fullscreen-img"></div>
-			</li>
-	
-			<!-- Slide 3 -->
-					
-			<li>	
-				<div style="background-image: url('img/1.jpg');" class="slides-fullscreen-img"></div>
-			</li>
-				
-		</ul>
-					
-  	</div><!-- Slider end -->
-	
-<!--================= Main start ================-->
-
-	<div class="main">
-
-		<div class="swiper-container">
-		
-			<div class="swiper-wrapper">
-			
-
-				<div class="swiper-slide">
-				
-			 <!--================= About start ================-->
-			 
-					<div class="container">
-										
-						<div class="content"> 
-	
-							<h2>About us</h2>    
-							<div class="small-separator"></div>                       	
-			
-							<p class="align-just"> Innovation, creativity, quality and promptness are the main mantras of Creative Brio and these are reflected in our work. We understand the challenges and the changes that the present world meets and that's why our Company are specifically tailored to your specific business needs and personal preferences. We strive hard to deliver fresh design & branding solutions with right mix of our creative people from a variety of experiences and backgrounds.</p> 
-							<p class="align-just">We are a Team of expert Designers and Developers trained in the industry who offer a quality, professional and trustworthy services. Our Team works closely with your organization to develop a web site that is consistent with the history of your company and at the same time competent with today's technology.</p>
-								
-							<!--social-links -->
-								
-							<div class="social-links">
-								<ul>
-									<li><a href="http://www.facebook.com/creativebrioindia" target="_blank" class="transition"><i class="fa fa-facebook-square"></i><span>Facebook</span></a></li>
-<!--									<li><a href="#" target="_blank" class="transition"><i class="fa fa-dribbble"></i><span>Dribbble</span></a></li>	-->
-									<li><a href="#" target="_blank" class="transition"><i class="fa fa-twitter"></i><span>Twitter</span></a></li>
-								</ul>
-							</div>
-			
-						</div><!--About end-->
-						<a class="navigation arrow-right back-left transition" href="#"><i class="fa fa-chevron-right"></i></a>  
-					</div>
-					
-				</div>
-				
+        <!-- Latest Work Section -->
+        <section id="work" class="py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold uppercase">Our Latest Work</h2>
+                     <p class="text-gray-400 mt-2">A glimpse into some of our recent projects.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden group">
+                        <img src="img/waira.jpg" alt="Waira Printers and Traders" class="w-full h-64 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">Waira Printers and Traders</h3>
+                        </div>
+                    </div>
+                     <div class="bg-gray-800 rounded-lg overflow-hidden group">
+                        <img src="img/global.jpg" alt="Global Express Broadband" class="w-full h-64 object-cover group-hover:opacity-80 transition-opacity duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold">Global Express Broadband</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-				<div class="swiper-slide"> 
-				
-				<!--============= Countdown start =============-->	
-				      	          
-					<div class="container">
-						
-						<div class="content fistslide transition bc"> 
-						
-						<div class="fade transition">  
-						<span class="rotade rot-top-left"></span>
-						<span class="rotade rot-top-right"></span>
-						<span class="rotade rot-bottom-left"></span>
-						<span class="rotade rot-bottom-right"></span>  
-							<img src="img/logo.png" alt="" /> 
-							 
-								<ul class="countdown">
-									<li>
-										<span class="days rot">00</span>
-										<p class="days_ref">days</p>			
-									</li>
-									<li>
-										<span class="hours rot">00</span>
-										<p class="hours_ref">hours</p>
-									</li>
-									<li>
-										<span class="minutes rot2">00</span>
-										<p class="minutes_ref">minutes</p>
-							
-									</li>
-									<li>
-										<span class="seconds rot2">00</span>
-										<p class="seconds_ref">seconds</p>
-									</li>
-								</ul>
-									
-			
-							<h3>We are currently working on our Awesome Website<br>Coming Soon...!!!</h3>
- 
-						</div> 
-						             
-						<div class="clear"></div>
-							
-						<div class="show-progress isDown transition">
-							<i class="fa fa-chevron-down fa-2x"></i>
-						</div>
-							
-						</div> 
-						              
-						<a class="navigation arrow-left about-link transition" href="#"><i class="fa fa-info fa-1x"></i></a> 
-						<a class="navigation arrow-right contact-link transition" href="#"><i class="fa fa-envelope-o fa-1x"></i></a> 
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold uppercase">About Us</h2>
+                </div>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-3xl font-bold text-indigo-400 mb-4">Who We Are</h3>
+                    <p class="text-gray-300 mb-8">
+                        We are individual professional fingers joined together to make a fist named Creative Brio. Our priority is to understand the needs of our clients and provide them with the simplest, best possible creative solutions. We offer a wide range of services, from logo design and advertising to complete 3D and VFX solutions. We just love to work.
+                    </p>
+                     <h3 class="text-3xl font-bold text-indigo-400 mb-4">Why Choose Us?</h3>
+                     <ul class="text-gray-300 space-y-2 inline-block text-left">
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500 mr-3"><polyline points="20 6 9 17 4 12"></polyline></svg>Client satisfaction is our top priority.</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500 mr-3"><polyline points="20 6 9 17 4 12"></polyline></svg>A professional creative team to tackle any challenge.</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500 mr-3"><polyline points="20 6 9 17 4 12"></polyline></svg>Complete e-commerce solutions under one roof.</li>
+                        <li class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-500 mr-3"><polyline points="20 6 9 17 4 12"></polyline></svg>Comprehensive Visual Effects & 3D Solutions.</li>
+                     </ul>
+                </div>
+            </div>
+        </section>
 
-						<div class="progress-holder">
-						
-							<div class="progress">
-							 
-							<input data-bgcolor="#ccc" data-readonly="true" type="text" data-width="250" data-skin="tron" data-fgcolor="#fff" data-thickness=".07" data-angleoffset="180" class="num num2" name="65" value="0" />
-							<span class="percent">%</span>
-							
-							</div>
-							
-							<h3>NOTIFY ME WHEN IT'S READY</h3> 
-							
-							<div class="subcribe">
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold uppercase">Get In Touch</h2>
+                    <p class="text-gray-400 mt-2">I’d love to hear from you! Complete the form to send an email.</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-gray-800 rounded-lg p-8 mb-8 flex flex-wrap gap-8 justify-center text-center">
+                        <div class="flex-1 min-w-[200px]">
+                            <h4 class="font-bold text-lg text-indigo-400">Address</h4>
+                            <p class="text-gray-300">16, Sunrise Plaza,<br>Vaishali, Ghaziabad 201014</p>
+                        </div>
+                         <div class="flex-1 min-w-[200px]">
+                            <h4 class="font-bold text-lg text-indigo-400">Phone</h4>
+                            <p class="text-gray-300">+91 9718 060 999</p>
+                        </div>
+                         <div class="flex-1 min-w-[200px]">
+                            <h4 class="font-bold text-lg text-indigo-400">Email</h4>
+                            <a href="mailto:info@creativebrio.in" class="text-gray-300 hover:text-white">info@creativebrio.in</a>
+                        </div>
+                    </div>
 
-								<span class="overlay suboverlay"></span>
-								<fieldset>
-									<form class="subscriptionForm" method="post" />
-										<input id="subscriptionForm" class="inputForm" type="text" value="info@creativebrio.in" onfocus="if (this.value=='info@creativebrio.in') this.value=''" onblur="if (this.value==''){this.value='info@creativebrio.in'}" />
-										<input type="submit" id="submitButton" class="transition" value="Send" />
-									</form>
-									
-									<div id="success">Thanks for your subscription</div>
-									<div id="error">Please enter a valid email address</div>
-									
-								</fieldset>
-								
-							</div>
-							 
-						</div> 
-						
-					</div> <!-- Countdown end --> 
-					   
-				</div>
-				
+                    <form action="#" method="POST" onsubmit="alert('This form is for demonstration only and is not active.'); return false;">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Your Name" class="bg-gray-800 border-2 border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 w-full">
+                            <input type="email" placeholder="Your Email" class="bg-gray-800 border-2 border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 w-full">
+                        </div>
+                        <textarea placeholder="Your Message" rows="5" class="bg-gray-800 border-2 border-gray-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 w-full mb-6"></textarea>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-				<div class="swiper-slide">
-				
-				<!--============== Contact start ================-->
-							
-					<div class="container">
+    </main>
 
-						<div class="content fade2 transition">
-						
-							<h2>Get in touch</h2> 
-							<div class="small-separator"></div>
-					
-							
-							<p class="align-just" style="text-align:center"> If you would like to find out more about how we can help you,</br> please give us a call or drop us an email. </p> 
-							
-							<div class="contact-info">
-							
-								<div class="grid-2 transition">
-									<i class="fa fa-mobile fa-2x"></i>
-									<br /><br /> +91 95 40 092025 
-								</div>	
-								
-								<div class="grid-2 transition lanch-form">
-									<i class="fa fa-envelope-o fa-2x"></i> 
-									<br /><br />info@creativebrio.in
-								</div>
-								
-								<div class="grid-2 transition">
-									<i class="fa fa-globe fa-2x"></i>
-									<br /><br /><a href="#" target="_blank">creativebrio.in</a> 
-								</div>
-							</div>			
-						</div>
-						
-						<!--contact form -->
-						
-						<div class="contact-form clear">
-							<div class="close-form transition"><i class="fa fa-times"></i></div>
-							<fieldset id="contact_form">
-																		
-										
-								<div class="grid-half">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-										
-								<div class="grid-half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" class="right" />
-								</div>
-										
-								<label for="message" class="m-top">Message</label>
-								<textarea name="message" id="message"></textarea>
-										
-								<div class="clear"></div>
-																	
-								<label>
-									<button class="submit_btn transition" id="submit_btn"><i class="fa fa-envelope-o fa-2x"></i> </button>
-								</label>
-								<div id="result"></div>
-								
-							</fieldset>
-								
-						</div>
-						
-						<a class="navigation arrow-left back-right transition" href="#"><i class="fa fa-chevron-left"></i></a> 
-						
-					</div><!--Contact end -->  
-					      
-				</div>
-				
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2024 Creative Brio. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-			</div> 
-			
-		</div>
-		
-	</div><!-- Main end -->
-	
-</div><!-- Wrapper end -->
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-<!--=============== javascript ===============-->
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jpreloader.min.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript" src="js/idangerous.swiper-2.0.min.js"></script>
-	<script type="text/javascript" src="js/superslides.js"></script>
-	<script type="text/javascript" src="js/county.js"></script>
-	<script type="text/javascript" src="js/jquery.knob.js"></script>
-	<script type="text/javascript" src="js/init.js"></script>
-	
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
+
